@@ -1,5 +1,6 @@
-#include "csapp.h"
+#include "../csapp.h"
 
+//connfd : 클라이언트와의 연결을 나타내는 연결 소켓
 void echo(int connfd){
     size_t n;
     char buf[MAXLINE];
