@@ -105,7 +105,7 @@ void clienterror(int fd, char *cause, char *errnum, char *shortmsg, char *longms
   sprintf(body, "%s<hr><em>The Tiny Web server</em>\r\n", body);
 
   //응답 헤더(buf) 생성 후 헤더와 본체 모두 클라이언트에게 전송
-  sprintf(buf, "HTTP/1.0 %s\r\n", errnum, shortmsg);
+  sprintf(buf, "HTTP/1.0 %s %s\r\n", errnum, shortmsg);
   Rio_writen(fd, buf, strlen(buf));
   sprintf(buf, "Content-type: text/html\r\n");
   Rio_writen(fd, buf, strlen(buf));
@@ -178,7 +178,7 @@ void serve_static(int fd, char *filename, int filesize) {
   //응답 헤더 생성
   sprintf(buf, "HTTP/1.0 200 OK\r\n");
   sprintf(buf, "%sServer: Tiny Web Server\r\n", buf);
-  sprintf("%sConnection : close\r\n", buf);
+  sprintf(buf, "%sConnection : close\r\n", buf);
   sprintf(buf, "%sContent-length: %d\r\n", buf, filesize);
   sprintf(buf, "%sContent-type: %s\r\n\r\n", buf, filetype);
   Rio_writen(fd, buf, strlen(buf));
