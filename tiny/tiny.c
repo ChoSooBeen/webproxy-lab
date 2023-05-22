@@ -194,7 +194,7 @@ void serve_static(int fd, char *filename, int filesize, char *method) {
     rio_readn(srcfd, srcp, filesize);
     Close(srcfd);
     Rio_writen(fd, srcp, filesize);
-    Munmap(srcp, filesize);
+    // Munmap(srcp, filesize);
     free(srcp); //malloc 해제하기
   }
 }
