@@ -8,10 +8,21 @@
         }
     </style>
 </head>
+<script>
+    function add() {
+        let n1 = document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        document.location.href = `./cgi-bin/adder?${n1}&${n2}`;
+    }
+</script>
 <body> 
     <video autoplay controls loop muted>
         <source src="jjangu.mp4" type="video/mp4">
         짱구 - 어떡하지
     </video>
+    <hr/>
+    <input type="text" id = "num1" size = 20>
+    <input type="text" id = "num2" size = 20>
+    <button onclick="add()">add</button>
 </body>
 </html>
