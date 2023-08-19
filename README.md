@@ -4,6 +4,17 @@
 # Student Source Files
 ####################################################################
 
+## :hourglass: 2023.05.19 ~ 2023.05.25
+## :bulb: 네트워크 및 웹서버 학습
+
+:bookmark: 블로그 정리
+- 네트워크 개념 : https://soo-note.tistory.com/75
+- echo server : https://soo-note.tistory.com/76
+- web server : https://soo-note.tistory.com/77
+- tiny server : https://soo-note.tistory.com/78
+- proxy server : https://soo-note.tistory.com/79
+
+---
 This directory contains the files you will need for the CS:APP Proxy
 Lab.
 
